@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FormModelStoreContainer" CdmEntityContainer="FormEntities">
+    <EntitySetMapping Name="UyeDb">
+      <EntityTypeMapping TypeName="FormModel.UyeDb">
+        <MappingFragment StoreEntitySet="UyeDb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="kadi" ColumnName="kadi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="il" ColumnName="il" />
+          <ScalarProperty Name="sdurum" ColumnName="sdurum" />
+          <ScalarProperty Name="dtarihi" ColumnName="dtarihi" />
+          <ScalarProperty Name="uyeliktipi" ColumnName="uyeliktipi" />
+          <ScalarProperty Name="boy" ColumnName="boy" />
+          <ScalarProperty Name="kilo" ColumnName="kilo" />
+          <ScalarProperty Name="fotograf" ColumnName="fotograf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

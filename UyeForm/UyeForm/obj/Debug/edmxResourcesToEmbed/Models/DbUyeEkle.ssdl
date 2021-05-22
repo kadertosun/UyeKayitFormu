@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FormModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="UyeDb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="50" />
+    <Property Name="soyadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="kadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefon" Type="nchar" MaxLength="20" />
+    <Property Name="mail" Type="nchar" MaxLength="25" />
+    <Property Name="adres" Type="nvarchar" MaxLength="80" />
+    <Property Name="il" Type="nchar" MaxLength="30" />
+    <Property Name="sdurum" Type="nchar" MaxLength="20" />
+    <Property Name="dtarihi" Type="date" />
+    <Property Name="uyeliktipi" Type="nvarchar" MaxLength="50" />
+    <Property Name="boy" Type="nchar" MaxLength="20" />
+    <Property Name="kilo" Type="nchar" MaxLength="20" />
+    <Property Name="fotograf" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="FormModelStoreContainer">
+    <EntitySet Name="UyeDb" EntityType="Self.UyeDb" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

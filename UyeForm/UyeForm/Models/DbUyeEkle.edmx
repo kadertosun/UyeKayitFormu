@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FormModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="UyeDb">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="soyadi" Type="nvarchar" MaxLength="50" />
+          <Property Name="kadi" Type="nvarchar" MaxLength="50" />
+          <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+          <Property Name="telefon" Type="nchar" MaxLength="20" />
+          <Property Name="mail" Type="nchar" MaxLength="25" />
+          <Property Name="adres" Type="nvarchar" MaxLength="80" />
+          <Property Name="il" Type="nchar" MaxLength="30" />
+          <Property Name="sdurum" Type="nchar" MaxLength="20" />
+          <Property Name="dtarihi" Type="date" />
+          <Property Name="uyeliktipi" Type="nvarchar" MaxLength="50" />
+          <Property Name="boy" Type="nchar" MaxLength="20" />
+          <Property Name="kilo" Type="nchar" MaxLength="20" />
+          <Property Name="fotograf" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="FormModelStoreContainer">
+          <EntitySet Name="UyeDb" EntityType="Self.UyeDb" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FormModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="UyeDb">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefon" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+          <Property Name="adres" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="il" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="sdurum" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="dtarihi" Type="DateTime" Precision="0" />
+          <Property Name="uyeliktipi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="boy" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="kilo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="fotograf" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="FormEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UyeDb" EntityType="Self.UyeDb" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FormModelStoreContainer" CdmEntityContainer="FormEntities">
+          <EntitySetMapping Name="UyeDb">
+            <EntityTypeMapping TypeName="FormModel.UyeDb">
+              <MappingFragment StoreEntitySet="UyeDb">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="adi" ColumnName="adi" />
+                <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+                <ScalarProperty Name="kadi" ColumnName="kadi" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="il" ColumnName="il" />
+                <ScalarProperty Name="sdurum" ColumnName="sdurum" />
+                <ScalarProperty Name="dtarihi" ColumnName="dtarihi" />
+                <ScalarProperty Name="uyeliktipi" ColumnName="uyeliktipi" />
+                <ScalarProperty Name="boy" ColumnName="boy" />
+                <ScalarProperty Name="kilo" ColumnName="kilo" />
+                <ScalarProperty Name="fotograf" ColumnName="fotograf" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
